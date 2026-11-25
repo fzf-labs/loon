@@ -1,0 +1,7 @@
+.DS_Store
+*.bak
+.env
+*.pem
+*.p12
+ca-*
+local/
