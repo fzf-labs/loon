@@ -1,0 +1,11 @@
+# NAME: Claude
+# AUTHOR: fzf-labs
+# REPO: https://github.com/fzf-labs/loon
+# UPDATED: 2026-11-25
+# NOTE: Anthropic / Claude
+# TOTAL: 4
+
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,claude.com
+DOMAIN-SUFFIX,claudeusercontent.com

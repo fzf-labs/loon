@@ -1,0 +1,10 @@
+# NAME: Alibaba
+# AUTHOR: fzf-labs
+# REPO: https://github.com/fzf-labs/loon
+# UPDATED: 2026-11-25
+# NOTE: 阿里云国际通义与 Coding Plan
+# TOTAL: 3
+
+DOMAIN-SUFFIX,coding-intl.dashscope.aliyuncs.com
+DOMAIN-SUFFIX,dashscope-intl.aliyuncs.com
+DOMAIN-SUFFIX,token-plan.ap-southeast-1.maas.aliyuncs.com

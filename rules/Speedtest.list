@@ -1,0 +1,10 @@
+# NAME: Speedtest
+# AUTHOR: fzf-labs
+# REPO: https://github.com/fzf-labs/loon
+# UPDATED: 2026-11-25
+# NOTE: 原先 SpeedtestInternational.lsr 是约 18500 条测速服务器主机名。这些名字都包含 speedtest 或 ookla，用关键词覆盖，新服务器不用再逐条添加。
+# TOTAL: 3
+
+DOMAIN-SUFFIX,ooklaserver.net
+DOMAIN-KEYWORD,ookla
+DOMAIN-KEYWORD,speedtest

@@ -1,0 +1,25 @@
+# NAME: OpenAI
+# AUTHOR: fzf-labs
+# REPO: https://github.com/fzf-labs/loon
+# UPDATED: 2026-11-25
+# NOTE: 仅覆盖 OpenAI / ChatGPT / Sora 相关域名，不含 Stripe、Sentry、Auth0 等共用域名
+# TOTAL: 18
+
+AND,((DOMAIN-KEYWORD,chatgpt-async-webps-prod-),(DOMAIN-SUFFIX,webpubsub.azure.com))
+AND,((DOMAIN-KEYWORD,openaicom-api-),(DOMAIN-SUFFIX,azurefd.net))
+DOMAIN,chatgpt.livekit.cloud
+DOMAIN,host.livekit.cloud
+DOMAIN,openai.com.cdn.cloudflare.net
+DOMAIN,openaiapi-site.azureedge.net
+DOMAIN,openaicomproductionae4b.blob.core.windows.net
+DOMAIN,production-openaicom-storage.azureedge.net
+DOMAIN,turn.livekit.cloud
+DOMAIN,openaicom.imgix.net
+DOMAIN-SUFFIX,chat.com
+DOMAIN-SUFFIX,chatgpt.com
+DOMAIN-SUFFIX,crixet.com
+DOMAIN-SUFFIX,oaistatic.com
+DOMAIN-SUFFIX,oaiusercontent.com
+DOMAIN-SUFFIX,openai.com
+DOMAIN-SUFFIX,sora.com
+DOMAIN-SUFFIX,chatgpt.site

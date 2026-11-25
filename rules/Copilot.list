@@ -1,0 +1,13 @@
+# NAME: Copilot
+# AUTHOR: fzf-labs
+# REPO: https://github.com/fzf-labs/loon
+# UPDATED: 2026-11-25
+# NOTE: GitHub Copilot 与 GitHub Models
+# TOTAL: 6
+
+DOMAIN-SUFFIX,copilot-proxy.githubusercontent.com
+DOMAIN-SUFFIX,copilot.microsoft.com
+DOMAIN-SUFFIX,githubcopilot.com
+DOMAIN-SUFFIX,models.inference.ai.azure.com
+DOMAIN-SUFFIX,sydney.bing.com
+DOMAIN-SUFFIX,titles.prod.mos.microsoft.com
