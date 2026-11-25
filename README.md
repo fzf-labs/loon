@@ -1,0 +1,96 @@
+# loon
+
+个人维护的 [Loon](https://nsloon.app/) 远程规则仓库。
+
+只放规则文件，不放完整配置。`.lcf`、机场订阅链接、证书等敏感内容不要提交到本仓库。
+
+## 目录
+
+```text
+rules/
+  Telegram.list        # 按原先 Telegram.lsr 整理，40 条
+  TikTok.list          # 按原先 TikTok.lsr 收成后缀
+  OpenAI.list          # OpenAI / ChatGPT / Sora
+  Claude.list          # Anthropic / Claude
+  Gemini.list          # Gemini、AI Studio、DeepMind、Antigravity
+  Copilot.list         # GitHub Copilot
+  Grok.list            # Grok / x.ai
+  Perplexity.list
+  Mistral.list
+  Kimi.list            # Kimi / Moonshot
+  Poe.list
+  HuggingFace.list
+  Groq.list
+  Meta.list
+  Ollama.list
+  OpenRouter.list
+  JetBrains.list
+  Trae.list
+  Alibaba.list         # 阿里云国际
+  Zhipu.list           # 智谱国际
+  StepFun.list         # 阶跃星辰国际
+  SiliconFlow.list     # 硅基流动国际
+  MiniMax.list
+  Xiaomi.list          # 小米国际 Token Plan
+  Zed.list
+  Devin.list
+  Nvidia.list
+  LLM-Gateway.list     # 其余模型 API 与网关
+  Speedtest.list       # 按原先约 18500 条测速主机名压缩
+  LAN.list             # 私网地址，DIRECT
+  China.list           # GEOIP,cn，DIRECT
+configs/
+  可莉-自动.lcf        # 当前使用的配置，订阅地址和证书已换成占位
+```
+
+## 在 Loon 中使用
+
+在配置的 `[Remote Rule]` 中添加：
+
+```ini
+https://raw.githubusercontent.com/fzf-labs/loon/main/rules/Telegram.list, policy=兜底后备策略, tag=Telegram, enabled=true
+https://raw.githubusercontent.com/fzf-labs/loon/main/rules/TikTok.list, policy=TikTok策略, tag=TikTok, enabled=true
+https://raw.githubusercontent.com/fzf-labs/loon/main/rules/OpenAI.list, policy=日本时延优选, tag=OpenAI, enabled=true
+https://raw.githubusercontent.com/fzf-labs/loon/main/rules/Claude.list, policy=日本时延优选, tag=Claude, enabled=true
+https://raw.githubusercontent.com/fzf-labs/loon/main/rules/Gemini.list, policy=日本时延优选, tag=Gemini, enabled=true
+https://raw.githubusercontent.com/fzf-labs/loon/main/rules/Copilot.list, policy=日本时延优选, tag=Copilot, enabled=true
+https://raw.githubusercontent.com/fzf-labs/loon/main/rules/Grok.list, policy=日本时延优选, tag=Grok, enabled=true
+https://raw.githubusercontent.com/fzf-labs/loon/main/rules/Perplexity.list, policy=日本时延优选, tag=Perplexity, enabled=true
+https://raw.githubusercontent.com/fzf-labs/loon/main/rules/Mistral.list, policy=日本时延优选, tag=Mistral, enabled=true
+https://raw.githubusercontent.com/fzf-labs/loon/main/rules/Kimi.list, policy=日本时延优选, tag=Kimi, enabled=true
+https://raw.githubusercontent.com/fzf-labs/loon/main/rules/Poe.list, policy=日本时延优选, tag=Poe, enabled=true
+https://raw.githubusercontent.com/fzf-labs/loon/main/rules/HuggingFace.list, policy=日本时延优选, tag=HuggingFace, enabled=true
+https://raw.githubusercontent.com/fzf-labs/loon/main/rules/Groq.list, policy=日本时延优选, tag=Groq, enabled=true
+https://raw.githubusercontent.com/fzf-labs/loon/main/rules/Meta.list, policy=日本时延优选, tag=Meta, enabled=true
+https://raw.githubusercontent.com/fzf-labs/loon/main/rules/Ollama.list, policy=日本时延优选, tag=Ollama, enabled=true
+https://raw.githubusercontent.com/fzf-labs/loon/main/rules/OpenRouter.list, policy=日本时延优选, tag=OpenRouter, enabled=true
+https://raw.githubusercontent.com/fzf-labs/loon/main/rules/JetBrains.list, policy=日本时延优选, tag=JetBrains, enabled=true
+https://raw.githubusercontent.com/fzf-labs/loon/main/rules/Trae.list, policy=日本时延优选, tag=Trae, enabled=true
+https://raw.githubusercontent.com/fzf-labs/loon/main/rules/Alibaba.list, policy=日本时延优选, tag=Alibaba, enabled=true
+https://raw.githubusercontent.com/fzf-labs/loon/main/rules/Zhipu.list, policy=日本时延优选, tag=Zhipu, enabled=true
+https://raw.githubusercontent.com/fzf-labs/loon/main/rules/StepFun.list, policy=日本时延优选, tag=StepFun, enabled=true
+https://raw.githubusercontent.com/fzf-labs/loon/main/rules/SiliconFlow.list, policy=日本时延优选, tag=SiliconFlow, enabled=true
+https://raw.githubusercontent.com/fzf-labs/loon/main/rules/MiniMax.list, policy=日本时延优选, tag=MiniMax, enabled=true
+https://raw.githubusercontent.com/fzf-labs/loon/main/rules/Xiaomi.list, policy=日本时延优选, tag=Xiaomi, enabled=true
+https://raw.githubusercontent.com/fzf-labs/loon/main/rules/Zed.list, policy=日本时延优选, tag=Zed, enabled=true
+https://raw.githubusercontent.com/fzf-labs/loon/main/rules/Devin.list, policy=日本时延优选, tag=Devin, enabled=true
+https://raw.githubusercontent.com/fzf-labs/loon/main/rules/Nvidia.list, policy=日本时延优选, tag=Nvidia, enabled=true
+https://raw.githubusercontent.com/fzf-labs/loon/main/rules/LLM-Gateway.list, policy=日本时延优选, tag=LLM-Gateway, enabled=true
+https://raw.githubusercontent.com/fzf-labs/loon/main/rules/Speedtest.list, policy=兜底后备策略, tag=Speedtest, enabled=true
+https://raw.githubusercontent.com/fzf-labs/loon/main/rules/LAN.list, policy=DIRECT, tag=LAN, enabled=true
+https://raw.githubusercontent.com/fzf-labs/loon/main/rules/China.list, policy=DIRECT, tag=CN REGION, enabled=true
+```
+
+这些服务规则互不重叠，改某一条的 `policy` 不会影响其他服务。仓库需要公开，Loon 才能拉取 `raw.githubusercontent.com` 链接。添加后在 Loon 中更新远程规则。
+
+`Telegram.list` 的 40 条与 [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script) 的 Telegram 列表一致，许可证为 GPL-3.0，全文见 `LICENSE-GPL`。
+
+## 配置
+
+`configs/可莉-自动.lcf` 是当前正在使用的配置副本。订阅地址和 MITM 证书已换成空占位，导入后需要自己填回本机的订阅链接。本机完整配置仍以 iCloud 里的 `可莉-自动` 为准，不要把带订阅 token 的文件提交到这个仓库。
+
+## 规则说明
+
+`rules/OpenAI.list` 只包含 OpenAI 相关域名，共 18 条，不包含 `stripe.com`、`sentry.io`、`auth0.com` 等共用域名。原先 `AI.lsr` 里的其他服务按产品拆成独立规则，`LLM-Gateway.list` 只放剩余的模型 API 和网关。`googleapis.com`、`microsoft.com`、`aliyuncs.com` 只保留具体主机，不包含整站 `bing.com`。`rules/China.list` 只有 `GEOIP,cn`。
+
+`rules/Speedtest.list` 把原先约 18500 条测速服务器主机名收成 `speedtest`、`ookla` 两个关键词。`rules/TikTok.list` 把原先同一 CDN 下的多条主机名收成后缀，并去掉 `cocacola.co.jp`、`courses.snapsolve.com`、`api.snapkit.com`、`engagements.appsflyer.com` 这几个与 TikTok 无关的域名。
