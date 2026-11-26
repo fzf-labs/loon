@@ -86,13 +86,13 @@ bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,1
 全球手动策略 = select,全球节点,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
 # --------------------------------
 # 时延优选策略组
-香港时延优选 = url-test,香港自动节点,interval = 600,tolerance = 300,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
-台湾时延优选 = url-test,台湾自动节点,interval = 600,tolerance = 300,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
-日本时延优选 = url-test,日本自动节点,interval = 600,tolerance = 300,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
-韩国时延优选 = url-test,韩国自动节点,interval = 600,tolerance = 300,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png
-新国时延优选 = url-test,新国自动节点,interval = 600,tolerance = 300,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
-美国时延优选 = url-test,美国自动节点,interval = 600,tolerance = 300,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
-德国时延优选 = url-test,德国自动节点,interval = 600,tolerance = 300,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/DE.png
+香港时延优选 = fallback,香港自动节点,interval = 600,max-timeout = 2000,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
+台湾时延优选 = fallback,台湾自动节点,interval = 600,max-timeout = 2000,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
+日本时延优选 = fallback,日本自动节点,interval = 600,max-timeout = 2000,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
+韩国时延优选 = fallback,韩国自动节点,interval = 600,max-timeout = 2000,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png
+新国时延优选 = fallback,新国自动节点,interval = 600,max-timeout = 2000,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
+美国时延优选 = fallback,美国自动节点,interval = 600,max-timeout = 2000,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
+德国时延优选 = fallback,德国自动节点,interval = 600,max-timeout = 2000,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/DE.png
 # --------------------------------
 # 兜底策略后备
 TikTok策略 = fallback,新国时延优选,日本时延优选,美国时延优选,台湾时延优选,interval = 600,max-timeout = 2000,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
