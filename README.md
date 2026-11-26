@@ -83,8 +83,6 @@ https://raw.githubusercontent.com/fzf-labs/loon/main/rules/China.list, policy=DI
 
 这些服务规则互不重叠，改某一条的 `policy` 不会影响其他服务。仓库需要公开，Loon 才能拉取 `raw.githubusercontent.com` 链接。添加后在 Loon 中更新远程规则。
 
-`Telegram.list` 的 40 条与 [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script) 的 Telegram 列表一致，许可证为 GPL-3.0，全文见 `LICENSE-GPL`。
-
 ## 配置
 
 `configs/自动.lcf` 是当前正在使用的配置副本。订阅地址和 MITM 证书已换成空占位，导入后需要自己填回本机的订阅链接。本机完整配置仍以 iCloud 里的 `自动` 为准，不要把带订阅 token 的文件提交到这个仓库。
@@ -94,3 +92,24 @@ https://raw.githubusercontent.com/fzf-labs/loon/main/rules/China.list, policy=DI
 `rules/OpenAI.list` 只包含 OpenAI 相关域名，共 18 条，不包含 `stripe.com`、`sentry.io`、`auth0.com` 等共用域名。原先 `AI.lsr` 里的其他服务按产品拆成独立规则，`LLM-Gateway.list` 只放剩余的模型 API 和网关。`googleapis.com`、`microsoft.com`、`aliyuncs.com` 只保留具体主机，不包含整站 `bing.com`。`rules/China.list` 只有 `GEOIP,cn`。
 
 `rules/Speedtest.list` 把原先约 18500 条测速服务器主机名收成 `speedtest`、`ookla` 两个关键词。`rules/TikTok.list` 把原先同一 CDN 下的多条主机名收成后缀，并去掉 `cocacola.co.jp`、`courses.snapsolve.com`、`api.snapkit.com`、`engagements.appsflyer.com` 这几个与 TikTok 无关的域名。
+
+## 参考
+
+配置写法以 Loon 官方文档为准。下面这些仓库只作来源说明，本仓库不是它们的镜像。可莉的 `.lsr` 和插件正文没有放进本仓库，插件仍从原地址加载。
+
+### 文档
+
+- [Loon](https://nsloon.app/)
+- [Loon 手册](https://nsloon.app/LoonManual/)
+- [规则](https://nsloon.app/docs/Rule/)
+- [策略](https://nsloon.app/docs/Policy/)
+- [策略组](https://nsloon.app/docs/Policy/policygroup)
+
+### 仓库
+
+- [luestr/ShuntRules](https://github.com/luestr/ShuntRules)：可莉的分流规则。`configs/自动.lcf` 的配置段和插件入口沿用这份自动配置，作者为 [iKeLee](https://t.me/iKeLee)，插件中心是 [hub.kelee.one](https://hub.kelee.one)。`Telegram`、`TikTok`、`Speedtest`、`AI`、`LAN`、`China` 按本机旧 `.lsr` 重写。
+- [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script)：`rules/Telegram.list` 的 40 条与其中的 [Telegram.list](https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Loon/Telegram/Telegram.list) 一致，许可证为 GPL-3.0，全文见 `LICENSE-GPL`。
+- [Loyalsoldier/geoip](https://github.com/Loyalsoldier/geoip)：`geoip-url` 使用的 `Country.mmdb`。数据来自 [MaxMind GeoLite2](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data)。
+- [P3TERX/GeoLite.mmdb](https://github.com/P3TERX/GeoLite.mmdb)：`ipasn-url` 使用的 GeoLite2 ASN 库。
+- [sub-store-org/Sub-Store](https://github.com/sub-store-org/Sub-Store)：`resource-parser` 使用的订阅解析脚本。
+- 策略组图标：[Orz-3/mini](https://github.com/Orz-3/mini)、[Koolson/Qure](https://github.com/Koolson/Qure)、[shindgewongxj/WHATSINStash](https://github.com/shindgewongxj/WHATSINStash)。
