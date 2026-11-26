@@ -17,12 +17,12 @@ wifi-access-socks5-port = 7221
 allow-wifi-access = false
 interface-mode = auto
 test-timeout = 2
-disconnect-on-policy-change = false
+disconnect-on-policy-change = true
 switch-node-after-failure-times = 1
 internet-test-url = http://connectivitycheck.platform.hicloud.com/generate_204
 proxy-test-url = http://www.gstatic.com/generate_204
 resource-parser = https://raw.githubusercontent.com/sub-store-org/Sub-Store/release/sub-store-parser.loon.min.js
-geoip-url = https://geodata.kelee.one/Country-Masaiki.mmdb
+geoip-url = https://github.com/Loyalsoldier/geoip/releases/latest/download/Country.mmdb
 ipasn-url = https://geodata.kelee.one/GeoLite2-ASN-P3TERX.mmdb
 skip-proxy = 192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,localhost,*.local,e.crashlynatics.com
 bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.0.0.0/24,192.0.2.0/24,192.88.99.0/24,192.168.0.0/16,198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,255.255.255.255/32
@@ -51,7 +51,7 @@ gw树洞.txt = https://example.com/your-subscription, udp=true, block-quic=true,
 土耳其节点 = NameRegex, FilterKey = "^(?=.*((?i)🇹🇷|土耳其|伊斯坦布尔|(\b(TR|TUR|Turkey|Istanbul)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
 加拿大节点 = NameRegex, FilterKey = "^(?=.*((?i)🇨🇦|加拿大|多伦多|温哥华|蒙特利尔|(\b(CA|CAN|Canada|Toronto|Vancouver)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
 澳洲节点 = NameRegex, FilterKey = "^(?=.*((?i)🇦🇺|澳大利亚|澳洲|悉尼|墨尔本|(\b(AU|AUS|Australia|Sydney)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-# 自动策略：常用地区测 Pro，美国和德国测【优化】，其余国家测 Pro。芬兰只有 Basic。排除家庭宽带
+# 自动策略：香港、台湾、日本、韩国、新加坡测 Pro 或优化；美国、德国只测优化。排除家庭宽带和 Basic。
 香港自动节点 = NameRegex, FilterKey = "^(?=.*((?i)🇭🇰|香港|(\b(HK|HKG|Hong)(\d+)?\b)))(?=.*((?i)\bpro\b|优化))(?!.*((?i)家庭|basic|回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
 台湾自动节点 = NameRegex, FilterKey = "^(?=.*((?i)🇹🇼|台湾|(\b(TW|TWN|Tai|Taiwan)(\d+)?\b)))(?=.*((?i)\bpro\b|优化))(?!.*((?i)家庭|basic|回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
 日本自动节点 = NameRegex, FilterKey = "^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|JPN|Japan)(\d+)?\b)))(?=.*((?i)\bpro\b|优化))(?!.*((?i)家庭|basic|回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
@@ -59,17 +59,6 @@ gw树洞.txt = https://example.com/your-subscription, udp=true, block-quic=true,
 新国自动节点 = NameRegex, FilterKey = "^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|SGP|Singapore)(\d+)?\b)))(?=.*((?i)\bpro\b|优化))(?!.*((?i)家庭|basic|回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
 美国自动节点 = NameRegex, FilterKey = "^(?=.*((?i)🇺🇸|美国|(\b(US|USA|United States)(\d+)?\b)))(?=.*优化)(?!.*((?i)家庭|basic|回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
 德国自动节点 = NameRegex, FilterKey = "^(?=.*((?i)🇩🇪|德国|(\b(DE|DEU|Germany)(\d+)?\b)))(?=.*优化)(?!.*((?i)家庭|basic|回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-马来自动节点 = NameRegex, FilterKey = "^(?=.*((?i)🇲🇾|马来西亚|马来|吉隆坡|(\b(MY|MYS|Malaysia)(\d+)?\b)))(?=.*((?i)\bpro\b|优化))(?!.*((?i)家庭|basic|回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-泰国自动节点 = NameRegex, FilterKey = "^(?=.*((?i)🇹🇭|泰国|曼谷|(\b(TH|THA|Thailand|Bangkok)(\d+)?\b)))(?=.*((?i)\bpro\b|优化))(?!.*((?i)家庭|basic|回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-越南自动节点 = NameRegex, FilterKey = "^(?=.*((?i)🇻🇳|越南|胡志明|河内|(\b(VN|VNM|Vietnam)(\d+)?\b)))(?=.*((?i)\bpro\b|优化))(?!.*((?i)家庭|basic|回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-英国自动节点 = NameRegex, FilterKey = "^(?=.*((?i)🇬🇧|英国|伦敦|(\b(UK|GB|GBR|United Kingdom|London)(\d+)?\b)))(?=.*((?i)\bpro\b|优化))(?!.*((?i)家庭|basic|回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-法国自动节点 = NameRegex, FilterKey = "^(?=.*((?i)🇫🇷|法国|巴黎|(\b(FR|FRA|France|Paris)(\d+)?\b)))(?=.*((?i)\bpro\b|优化))(?!.*((?i)家庭|basic|回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-意大利自动节点 = NameRegex, FilterKey = "^(?=.*((?i)🇮🇹|意大利|米兰|(\b(IT|ITA|Italy|Milan)(\d+)?\b)))(?=.*((?i)\bpro\b|优化))(?!.*((?i)家庭|basic|回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-瑞士自动节点 = NameRegex, FilterKey = "^(?=.*((?i)🇨🇭|瑞士|苏黎世|(\b(CH|CHE|Switzerland|Zurich)(\d+)?\b)))(?=.*((?i)\bpro\b|优化))(?!.*((?i)家庭|basic|回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-芬兰自动节点 = NameRegex, FilterKey = "^(?=.*((?i)🇫🇮|芬兰|赫尔辛基|(\b(FI|FIN|Finland|Helsinki)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-土耳其自动节点 = NameRegex, FilterKey = "^(?=.*((?i)🇹🇷|土耳其|伊斯坦布尔|(\b(TR|TUR|Turkey|Istanbul)(\d+)?\b)))(?=.*((?i)\bpro\b|优化))(?!.*((?i)家庭|basic|回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-加拿大自动节点 = NameRegex, FilterKey = "^(?=.*((?i)🇨🇦|加拿大|多伦多|温哥华|蒙特利尔|(\b(CA|CAN|Canada|Toronto|Vancouver)(\d+)?\b)))(?=.*((?i)\bpro\b|优化))(?!.*((?i)家庭|basic|回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-澳洲自动节点 = NameRegex, FilterKey = "^(?=.*((?i)🇦🇺|澳大利亚|澳洲|悉尼|墨尔本|(\b(AU|AUS|Australia|Sydney)(\d+)?\b)))(?=.*((?i)\bpro\b|优化))(?!.*((?i)家庭|basic|回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
 游戏节点 = NameRegex, FilterKey = "^(?=.*((?i)游戏|🎮|(\b(GAME)(\d+)?\b)))(?!.*((?i)回国|校园)).*$"
 全球节点 = NameRegex, FilterKey = "^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|超时|收藏|福利|邀请|好友|失联|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic)(\d+)?\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$"
 
@@ -97,28 +86,17 @@ gw树洞.txt = https://example.com/your-subscription, udp=true, block-quic=true,
 全球手动策略 = select,全球节点,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
 # --------------------------------
 # 时延优选策略组
-香港时延优选 = url-test,香港自动节点,interval = 60,tolerance = 100,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
-台湾时延优选 = url-test,台湾自动节点,interval = 60,tolerance = 100,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
-日本时延优选 = url-test,日本自动节点,interval = 60,tolerance = 100,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
-韩国时延优选 = url-test,韩国自动节点,interval = 60,tolerance = 100,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png
-新国时延优选 = url-test,新国自动节点,interval = 60,tolerance = 100,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
-美国时延优选 = url-test,美国自动节点,interval = 60,tolerance = 100,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
-德国时延优选 = url-test,德国自动节点,interval = 60,tolerance = 100,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/DE.png
-马来时延优选 = url-test,马来自动节点,interval = 60,tolerance = 100,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Malaysia.png
-泰国时延优选 = url-test,泰国自动节点,interval = 60,tolerance = 100,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/TH.png
-越南时延优选 = url-test,越南自动节点,interval = 60,tolerance = 100,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/VN.png
-英国时延优选 = url-test,英国自动节点,interval = 60,tolerance = 100,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/UK.png
-法国时延优选 = url-test,法国自动节点,interval = 60,tolerance = 100,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/FR.png
-意大利时延优选 = url-test,意大利自动节点,interval = 60,tolerance = 100,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/IT.png
-瑞士时延优选 = url-test,瑞士自动节点,interval = 60,tolerance = 100,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/CH.png
-芬兰时延优选 = url-test,芬兰自动节点,interval = 60,tolerance = 100,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Finland.png
-土耳其时延优选 = url-test,土耳其自动节点,interval = 60,tolerance = 100,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/TR.png
-加拿大时延优选 = url-test,加拿大自动节点,interval = 60,tolerance = 100,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/CA.png
-澳洲时延优选 = url-test,澳洲自动节点,interval = 60,tolerance = 100,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/AU.png
+香港时延优选 = url-test,香港自动节点,interval = 300,tolerance = 100,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
+台湾时延优选 = url-test,台湾自动节点,interval = 300,tolerance = 100,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
+日本时延优选 = url-test,日本自动节点,interval = 300,tolerance = 100,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
+韩国时延优选 = url-test,韩国自动节点,interval = 300,tolerance = 100,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png
+新国时延优选 = url-test,新国自动节点,interval = 300,tolerance = 100,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
+美国时延优选 = url-test,美国自动节点,interval = 300,tolerance = 100,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
+德国时延优选 = url-test,德国自动节点,interval = 300,tolerance = 100,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/DE.png
 # --------------------------------
 # 兜底策略后备
-TikTok策略 = fallback,新国时延优选,日本时延优选,美国时延优选,台湾时延优选,interval = 60,max-timeout = 2000,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
-兜底后备策略 = fallback,香港时延优选,台湾时延优选,日本时延优选,韩国时延优选,新国时延优选,美国时延优选,德国时延优选,马来时延优选,泰国时延优选,越南时延优选,英国时延优选,法国时延优选,意大利时延优选,瑞士时延优选,芬兰时延优选,土耳其时延优选,加拿大时延优选,澳洲时延优选,interval = 60,max-timeout = 2000,img-url = https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/fallback.png
+TikTok策略 = fallback,新国时延优选,日本时延优选,美国时延优选,台湾时延优选,interval = 300,max-timeout = 2000,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
+兜底后备策略 = fallback,香港时延优选,台湾时延优选,日本时延优选,韩国时延优选,新国时延优选,美国时延优选,德国时延优选,interval = 300,max-timeout = 2000,img-url = https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/fallback.png
 
 [Rule]
 # 当配置文件中没有任何有效策略组时，Loon将使用内置的PROXY策略组
