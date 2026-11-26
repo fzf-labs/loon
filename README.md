@@ -14,7 +14,6 @@ rules/
   Claude.list          # Anthropic / Claude
   Gemini.list          # Gemini、AI Studio、DeepMind、Antigravity
   Copilot.list         # GitHub Copilot
-  Grok.list            # Grok / x.ai
   Perplexity.list
   Mistral.list
   Kimi.list            # Kimi / Moonshot
@@ -35,6 +34,7 @@ rules/
   Zed.list
   Devin.list
   Nvidia.list
+  SpaceXAI.list        # Cursor、Grok、Grok Bot、登录域名和 X
   LLM-Gateway.list     # 其余模型 API 与网关
   Speedtest.list       # 按原先约 18500 条测速主机名压缩
   LAN.list             # 私网地址，DIRECT
@@ -54,7 +54,6 @@ https://raw.githubusercontent.com/fzf-labs/loon/main/rules/OpenAI.list, policy=�
 https://raw.githubusercontent.com/fzf-labs/loon/main/rules/Claude.list, policy=日本时延优选, tag=Claude, enabled=true
 https://raw.githubusercontent.com/fzf-labs/loon/main/rules/Gemini.list, policy=日本时延优选, tag=Gemini, enabled=true
 https://raw.githubusercontent.com/fzf-labs/loon/main/rules/Copilot.list, policy=日本时延优选, tag=Copilot, enabled=true
-https://raw.githubusercontent.com/fzf-labs/loon/main/rules/Grok.list, policy=日本时延优选, tag=Grok, enabled=true
 https://raw.githubusercontent.com/fzf-labs/loon/main/rules/Perplexity.list, policy=日本时延优选, tag=Perplexity, enabled=true
 https://raw.githubusercontent.com/fzf-labs/loon/main/rules/Mistral.list, policy=日本时延优选, tag=Mistral, enabled=true
 https://raw.githubusercontent.com/fzf-labs/loon/main/rules/Kimi.list, policy=日本时延优选, tag=Kimi, enabled=true
@@ -75,6 +74,7 @@ https://raw.githubusercontent.com/fzf-labs/loon/main/rules/Xiaomi.list, policy=�
 https://raw.githubusercontent.com/fzf-labs/loon/main/rules/Zed.list, policy=日本时延优选, tag=Zed, enabled=true
 https://raw.githubusercontent.com/fzf-labs/loon/main/rules/Devin.list, policy=日本时延优选, tag=Devin, enabled=true
 https://raw.githubusercontent.com/fzf-labs/loon/main/rules/Nvidia.list, policy=日本时延优选, tag=Nvidia, enabled=true
+https://raw.githubusercontent.com/fzf-labs/loon/main/rules/SpaceXAI.list, policy=日本时延优选, tag=SpaceXAI, enabled=true
 https://raw.githubusercontent.com/fzf-labs/loon/main/rules/LLM-Gateway.list, policy=日本时延优选, tag=LLM-Gateway, enabled=true
 https://raw.githubusercontent.com/fzf-labs/loon/main/rules/Speedtest.list, policy=兜底后备策略, tag=Speedtest, enabled=true
 https://raw.githubusercontent.com/fzf-labs/loon/main/rules/LAN.list, policy=DIRECT, tag=LAN, enabled=true
@@ -89,7 +89,7 @@ https://raw.githubusercontent.com/fzf-labs/loon/main/rules/China.list, policy=DI
 
 ## 规则说明
 
-`rules/OpenAI.list` 只包含 OpenAI 相关域名，共 18 条，不包含 `stripe.com`、`sentry.io`、`auth0.com` 等共用域名。原先 `AI.lsr` 里的其他服务按产品拆成独立规则，`LLM-Gateway.list` 只放剩余的模型 API 和网关。`googleapis.com`、`microsoft.com`、`aliyuncs.com` 只保留具体主机，不包含整站 `bing.com`。`rules/China.list` 只有 `GEOIP,cn`。
+`rules/SpaceXAI.list` 覆盖 Cursor、Grok、Grok Bot、登录域名和 X：`cursor.sh`、`cursor.com`、`cursorapi.com`、`cursor-cdn.com`、`cursorvm.com`、`anysphere.inc`，以及 `spacexsi.com`、`grok.com`、`grokbot.com`、`x.ai`、`grokusercontent.com`、`grokipedia.com`、`x.com`、`twitter.com`。`rules/OpenAI.list` 只包含 OpenAI 相关域名，共 18 条，不包含 `stripe.com`、`sentry.io`、`auth0.com` 等共用域名。原先 `AI.lsr` 里的其他服务按产品拆成独立规则，`LLM-Gateway.list` 只放剩余的模型 API 和网关。`googleapis.com`、`microsoft.com`、`aliyuncs.com` 只保留具体主机，不包含整站 `bing.com`。`rules/China.list` 只有 `GEOIP,cn`。
 
 `rules/Speedtest.list` 把原先约 18500 条测速服务器主机名收成 `speedtest`、`ookla` 两个关键词。`rules/TikTok.list` 把原先同一 CDN 下的多条主机名收成后缀，并去掉 `cocacola.co.jp`、`courses.snapsolve.com`、`api.snapkit.com`、`engagements.appsflyer.com` 这几个与 TikTok 无关的域名。
 
