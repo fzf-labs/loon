@@ -112,7 +112,6 @@ https://raw.githubusercontent.com/fzf-labs/loon/main/rules/OpenAI.list, policy=�
 https://raw.githubusercontent.com/fzf-labs/loon/main/rules/Claude.list, policy=日本时延优选, tag=Claude, enabled=true
 https://raw.githubusercontent.com/fzf-labs/loon/main/rules/Gemini.list, policy=日本时延优选, tag=Gemini, enabled=true
 https://raw.githubusercontent.com/fzf-labs/loon/main/rules/Copilot.list, policy=日本时延优选, tag=Copilot, enabled=true
-https://raw.githubusercontent.com/fzf-labs/loon/main/rules/Grok.list, policy=日本时延优选, tag=Grok, enabled=true
 https://raw.githubusercontent.com/fzf-labs/loon/main/rules/Perplexity.list, policy=日本时延优选, tag=Perplexity, enabled=true
 https://raw.githubusercontent.com/fzf-labs/loon/main/rules/Mistral.list, policy=日本时延优选, tag=Mistral, enabled=true
 https://raw.githubusercontent.com/fzf-labs/loon/main/rules/Kimi.list, policy=日本时延优选, tag=Kimi, enabled=true
@@ -133,6 +132,7 @@ https://raw.githubusercontent.com/fzf-labs/loon/main/rules/Xiaomi.list, policy=�
 https://raw.githubusercontent.com/fzf-labs/loon/main/rules/Zed.list, policy=日本时延优选, tag=Zed, enabled=true
 https://raw.githubusercontent.com/fzf-labs/loon/main/rules/Devin.list, policy=日本时延优选, tag=Devin, enabled=true
 https://raw.githubusercontent.com/fzf-labs/loon/main/rules/Nvidia.list, policy=日本时延优选, tag=Nvidia, enabled=true
+https://raw.githubusercontent.com/fzf-labs/loon/main/rules/SpaceXAI.list, policy=日本时延优选, tag=SpaceXAI, enabled=true
 https://raw.githubusercontent.com/fzf-labs/loon/main/rules/LLM-Gateway.list, policy=日本时延优选, tag=LLM-Gateway, enabled=true
 https://raw.githubusercontent.com/fzf-labs/loon/main/rules/Speedtest.list, policy=兜底后备策略, tag=Speedtest, enabled=true
 https://raw.githubusercontent.com/fzf-labs/loon/main/rules/LAN.list, policy=DIRECT, tag=LAN, enabled=true
