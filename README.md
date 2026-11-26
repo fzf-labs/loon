@@ -40,7 +40,7 @@ rules/
   LAN.list             # 私网地址，DIRECT
   China.list           # GEOIP,cn，DIRECT
 configs/
-  可莉-自动.lcf        # 当前使用的配置，订阅地址和证书已换成占位
+  自动.lcf            # 当前使用的配置，订阅地址和证书已换成占位
 ```
 
 ## 在 Loon 中使用
@@ -87,7 +87,7 @@ https://raw.githubusercontent.com/fzf-labs/loon/main/rules/China.list, policy=DI
 
 ## 配置
 
-`configs/可莉-自动.lcf` 是当前正在使用的配置副本。订阅地址和 MITM 证书已换成空占位，导入后需要自己填回本机的订阅链接。本机完整配置仍以 iCloud 里的 `可莉-自动` 为准，不要把带订阅 token 的文件提交到这个仓库。
+`configs/自动.lcf` 是当前正在使用的配置副本。订阅地址和 MITM 证书已换成空占位，导入后需要自己填回本机的订阅链接。本机完整配置仍以 iCloud 里的 `自动` 为准，不要把带订阅 token 的文件提交到这个仓库。
 
 ## 规则说明
 
